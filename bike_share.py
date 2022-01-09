@@ -41,7 +41,7 @@ def get_user_input_for_month():
         if month in MONTHS_LIST:
             return month
         else:
-            print('Sorry, we don\'t have the data for month ' + month + '. Please input either ' + ', '.join(MONTHS_LIST) + '.')
+            print('Please, we don\'t have the data for month ' + month + '. Please input either ' + ', '.join(MONTHS_LIST) + '.')
 
 def get_user_input_for_weekday():
     '''Asks the user for a month and returns the filename for that city's bike share data.
