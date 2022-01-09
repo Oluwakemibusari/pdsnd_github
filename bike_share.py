@@ -16,15 +16,15 @@ def get_user_input_for_city():
     Returns:
         (str) Filename for a city's bikeshare data.
     '''
-    
+
     city = ''
     while True:
         city = input('\nWould you like to analyse data for ' + ', '.join(CITY_LIST) + '?\n')
 
         if city in CITY_LIST:
             return city
-        else:  
-            print('Sorry, we don\'t have the data for city ' + city + '. Please input either ' + ', '.join(CITY_LIST) + '.')
+        else:
+            print('Unfortunately, we don\'t have the data for city ' + city + '. Please input either ' + ', '.join(CITY_LIST) + '.')
 
 def get_user_input_for_month():
     '''Asks the user for a month and returns the filename for that city's bike share data.
@@ -33,14 +33,14 @@ def get_user_input_for_month():
     Returns:
         (str) Filename for a city's bikeshare data.
     '''
-    
+
     month = ''
     while True:
         month = input('\nWould you like to analyse data for ' + ', '.join(MONTHS_LIST) + '?\n')
 
         if month in MONTHS_LIST:
             return month
-        else:  
+        else:
             print('Sorry, we don\'t have the data for month ' + month + '. Please input either ' + ', '.join(MONTHS_LIST) + '.')
 
 def get_user_input_for_weekday():
@@ -50,14 +50,14 @@ def get_user_input_for_weekday():
     Returns:
         (str) Filename for a city's bikeshare data.
     '''
-    
+
     weekday = ''
     while True:
         weekday = input('\nWould you like to analyse data for ' + ', '.join(WEEKDAYS_LIST) + '?\n')
 
         if weekday in WEEKDAYS_LIST:
             return weekday
-        else:  
+        else:
             print('Sorry, we don\'t have the data for month ' + weekday + '. Please input either ' + ', '.join(WEEKDAYS_LIST) + '.')
 
 def get_filters():
@@ -227,7 +227,7 @@ def display_raw_data(df):
     Args:
         (DataFrame) df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+
     print(df.head())
     next = 0
     while True:
